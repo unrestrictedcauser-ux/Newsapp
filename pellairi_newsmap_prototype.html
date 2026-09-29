@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PELLAIRI | NewsMAP + Decision Sandbox</title>
+<style>
+:root{--ink:#17212b;--muted:#5c6873;--line:#dbe2e8;--bg:#f5f7f9;--card:#fff;--accent:#245b7a;--accent2:#4c819e}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.nav{max-width:1120px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;letter-spacing:.12em}.nav a{color:var(--ink);text-decoration:none;margin-left:22px;font-size:14px}
+.hero{background:linear-gradient(135deg,#18384b,#2d6685);color:white}
+.wrap{max-width:1120px;margin:auto;padding:72px 22px}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin:0 0 18px;letter-spacing:-.03em}
+.hero p{max-width:720px;font-size:20px;color:#e8f1f5;margin:0 0 28px}
+.badge{display:inline-block;border:1px solid rgba(255,255,255,.35);padding:7px 11px;border-radius:999px;font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+.btn{display:inline-block;background:white;color:#18384b;padding:12px 17px;border-radius:8px;text-decoration:none;font-weight:700}
+section{max-width:1120px;margin:auto;padding:58px 22px}
+.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:var(--accent);font-weight:800}
+h2{font-size:34px;margin:8px 0 12px} h3{margin:0 0 8px}.lead{color:var(--muted);max-width:780px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:0 4px 18px rgba(20,40,55,.04)}
+.num{font-size:12px;color:var(--accent);font-weight:800}
+.newsmap{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:28px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+.feed{border-top:1px solid var(--line);margin-top:14px}
+.item{padding:14px 0;border-bottom:1px solid var(--line)}
+.tag{font-size:11px;background:#eaf1f5;padding:4px 7px;border-radius:5px;margin-right:6px}
+.workflow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:30px}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:17px;min-height:155px}
+.step strong{display:block;margin:8px 0}.step small{color:var(--muted)}
+.callout{background:#edf4f7;border-left:4px solid var(--accent);padding:18px 20px;margin-top:25px;border-radius:6px}
+footer{background:#17212b;color:#dce5ea}.footer{max-width:1120px;margin:auto;padding:34px 22px}
+@media(max-width:800px){.grid,.newsmap{grid-template-columns:1fr}.workflow{grid-template-columns:1fr 1fr}.nav a{margin-left:10px}}
+@media(max-width:500px){.workflow{grid-template-columns:1fr}.nav a{display:none}.wrap{padding-top:50px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">PELLAIRI</div><div>
+<a href="#newsmap">NewsMAP</a><a href="#sandbox">Sandbox</a><a href="#workflow">Research Workflow</a>
+</div></div></header>
+
+<div class="hero"><div class="wrap">
+<span class="badge">Structured intelligence • auditable systems</span>
+<h1>Making complex information easier to evaluate.</h1>
+<p>PELLAIRI develops structured tools for AI evaluation, data analysis, decision support, software quality, and audit-ready workflows.</p>
+<a class="btn" href="#newsmap">Explore the prototype</a>
+</div></div>
+
+<section id="newsmap">
+<div class="kicker">Product concept</div>
+<h2>NewsMAP App</h2>
+<p class="lead">A structured news-analysis workspace designed to organize sources, claims, topics, evidence, and relationships so researchers can move from raw information toward a traceable analytical record.</p>
+<div class="newsmap">
+<div class="panel">
+<h3>News stream</h3>
+<p class="lead">Prototype view — example records only.</p>
+<div class="feed">
+<div class="item"><span class="tag">Source</span><strong>Article / document intake</strong><br><small>Capture source, date, topic, and provenance.</small></div>
+<div class="item"><span class="tag">Claim</span><strong>Claim extraction</strong><br><small>Separate reported statements from analytical interpretation.</small></div>
+<div class="item"><span class="tag">Evidence</span><strong>Evidence mapping</strong><br><small>Connect claims to supporting material and identify gaps.</small></div>
+</div>
+</div>
+<div class="panel">
+<h3>MAP view</h3>
+<p class="lead">A conceptual relationship map.</p>
+<div class="callout"><strong>Topic → Claim → Source → Evidence</strong><br>Each relationship can carry provenance, confidence, status, and notes.</div>
+<div class="callout"><strong>Research queue</strong><br>Items needing human review can be separated from routine organization tasks.</div>
+</div>
+</div>
+</section>
+
+<section id="sandbox">
+<div class="kicker">Decision infrastructure</div>
+<h2>Pre-Execution Decision Sandbox</h2>
+<p class="lead">A controlled workflow for testing a proposed action before execution by combining structured inputs, quantitative simulation, independent qualitative analysis, synthesis, adjudication, and an auditable record.</p>
+<div class="grid">
+<div class="card"><div class="num">01 · STRUCTURE</div><h3>Define</h3><p>Represent the decision, variables, constraints, assumptions, models, and datasets in a structured form.</p></div>
+<div class="card"><div class="num">02 · ANALYZE</div><h3>Test</h3><p>Run quantitative simulation and independent supportive/adversarial analysis against the same defined decision.</p></div>
+<div class="card"><div class="num">03 · SYNTHESIZE</div><h3>Review</h3><p>Cross-check outputs, record uncertainty and sensitivity, and produce an auditable synthesis before execution.</p></div>
+</div>
+</section>
+
+<section id="workflow">
+<div class="kicker">Potential research workflow</div>
+<h2>Where structured tooling could reduce workload</h2>
+<p class="lead">The diagram below describes potential workload reduction, not a measured productivity claim. The intended principle is to automate repeatable organization and checking while keeping substantive judgment with the researcher.</p>
+<div class="workflow">
+<div class="step"><div class="num">01</div><strong>Collect</strong><small>Gather articles, datasets, documents, and metadata.</small></div>
+<div class="step"><div class="num">02</div><strong>Normalize</strong><small>Standardize fields, labels, timestamps, and source records.</small></div>
+<div class="step"><div class="num">03</div><strong>Map</strong><small>Link sources, claims, variables, evidence, and relationships.</small></div>
+<div class="step"><div class="num">04</div><strong>Evaluate</strong><small>Apply defined rubrics, tests, simulations, and consistency checks.</small></div>
+<div class="step"><div class="num">05</div><strong>Audit</strong><small>Preserve provenance, decisions, outputs, and review history.</small></div>
+</div>
+<div class="callout"><strong>Potential workload effect:</strong> less repetitive searching, sorting, formatting, cross-referencing, and first-pass checking; more researcher time available for interpretation, experimental design, methodological review, and substantive conclusions. Actual savings would need to be measured against a defined baseline.</div>
+</section>
+
+<section>
+<div class="kicker">PELLAIRI</div>
+<h2>Evidence first. Structure by design.</h2>
+<p class="lead">PELLAIRI is positioned for organizations, technology teams, researchers, and independent innovators that need measurable evaluation, traceable analysis, quality controls, and structured technology solutions.</p>
+</section>
+<footer><div class="footer"><strong>PELLAIRI</strong><br><small>Structured Intelligence. Auditable Systems.</small></div></footer>
+</body>
+</html>
